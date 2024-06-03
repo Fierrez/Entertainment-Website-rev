@@ -1,3 +1,21 @@
+:root{
+    /* --lightfont:rgb(230, 230, 230) !important;
+    --darkbg: black !important;
+    --borderdark:rgb(44, 44, 44) !important ;
+    
+    --darkfont: rgb(10, 10, 10) !important;
+    --lightbg: rgb(255, 255, 255) !important;
+    --borderlight:rgb(100, 100, 100) !important; */
+
+    --font: rgba(0, 0, 0, 0.808);
+    --bg: white;
+    --bordercolor:rgba(44, 44, 44, 0.637) !important  ;
+}
+
+
+
+
+
 *{
     box-sizing: border-box;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -92,14 +110,20 @@ header{
     button  {
         background: none;
         border: none;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        
         
     }
-    .profile img{
-        width: 1.2rem ;
+    .profile {
+        border: 1px solid var(--bordercolor);
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 1px 10px;
     }
     .profileIcon{
         font-size: 1.5rem;
+ 
     }
 
     .d-flex{
