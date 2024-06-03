@@ -98,16 +98,16 @@
         </div>
   
         <div class="modal-body p-5 pt-0">
-          <form class="">
+          <form class="" method="post" action="register.php">
             <div class="form-floating mb-3">
-              <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
+              <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="name@example.com">
+              <label for="email">Email address</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Password</label>
+              <input type="password" class="form-control rounded-3" id="password" name="password" placeholder="Password">
+              <label for="password">Password</label>
             </div>
-            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="LogInButton">Log in</button>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="LogInName" name="LogInName">Log in</button>
             <small class="text-body-secondary">By clicking Log in, you agree to the terms of use.</small><br>
             <small class="text-body-secondary">Don't have an account?<button type="button" class="modal-signup-button"   data-bs-toggle="modal" data-bs-target="#modalSignup">
                 Signup
@@ -143,16 +143,20 @@
         </div>
   
         <div class="modal-body p-5 pt-0">
-          <form class="">
+          <form class="" method="post" action="register.php">
             <div class="form-floating mb-3">
-              <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
+              <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="name@example.com">
+              <label for="email">Email address</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Password</label>
+              <input type="password" class="form-control rounded-3" id="password" name="password" placeholder="Password">
+              <label for="password">Password</label>
             </div>
-            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="SignUpButton">Sign up</button>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" id="username" name="username" placeholder="Username">
+              <label for="username">Username</label>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="SignUpButton" name="SignUpName">Sign up</button>
             <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small><br>
             <small class="text-body-secondary">Already have an account?<button type="button" class="modal-login-button" data-bs-toggle="modal" data-bs-target="#modalSignin">
                 Login now
