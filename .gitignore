@@ -135,3 +135,7 @@ bootstrap-5.3.3
 bootstrap-5.3.3-examples
 node_modules
 .vscode
+
+
+misc
+config.env
