@@ -7,8 +7,8 @@
     --lightbg: rgb(255, 255, 255) !important;
     --borderlight:rgb(100, 100, 100) !important; */
 
-    --font: rgba(0, 0, 0, 0.808);
-    --bg: white;
+    --font: rgba(0, 0, 0, 0.808) !important;
+    --bg: white !important;
     --bordercolor:rgba(44, 44, 44, 0.637) !important  ;
 }
 

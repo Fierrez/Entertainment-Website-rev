@@ -1,4 +1,4 @@
-:root{
+ :root{
     /* --lightfont:rgb(230, 230, 230) !important;
     --darkbg: black !important;
     --borderdark:rgb(44, 44, 44) !important ;
@@ -6,20 +6,20 @@
     --darkfont: rgb(10, 10, 10) !important;
     --lightbg: rgb(255, 255, 255) !important;
     --borderlight:rgb(100, 100, 100) !important; */
-/* 
+
     --font: ;
     --bg: ;
-    --bordercolor: ; */
-}
+    --bordercolor: ; 
+} 
 
 
 
 
-/* *{
+*{
     color: var(--font) !important;
     background-color: var(--bg)!important;
     border-color:var(--bordercolor)!important;
-} */
+}
 .light-theme{
     color: black !important;
     background-color: white !important;

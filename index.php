@@ -1,3 +1,12 @@
+<?php
+session_start();
+include ("connect.php");
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,16 +17,12 @@
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="global.css">
-
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/modals/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
     
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css">
 </head>
 <body>
     <header class="container-fluid fixed-top ">

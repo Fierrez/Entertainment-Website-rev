@@ -23,6 +23,7 @@ include ("connect.php");
                   
                     while($row=mysqli_fetch_array($query)){
                         echo $row['userAccountName'];
+                        
                     }
 
                 }
@@ -32,5 +33,9 @@ include ("connect.php");
         </p>
 
     </div>
+
+    <script>
+        
+    </script>
 </body>
 </html>
