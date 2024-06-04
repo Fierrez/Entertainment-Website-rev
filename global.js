@@ -10,7 +10,7 @@ function LightMode(){
         
         root.style.setProperty('--font', 'rgb(230, 230, 230)')
         root.style.setProperty('--bg', 'black')
-        root.style.setProperty('--border-color', 'rgb(44, 44, 44)')
+        root.style.setProperty('--bordercolor', 'rgb(44, 44, 44)')
         
         toggle="true";
         localStorage.setItem("prefferedTheme","black")
@@ -19,7 +19,7 @@ function LightMode(){
 
         root.style.setProperty('--font', 'black')
         root.style.setProperty('--bg', 'white')
-        root.style.setProperty('--border-color', 'rgb(44, 44, 44)')
+        root.style.setProperty('--bordercolor', 'rgb(44, 44, 44)')
       
         
         toggle="false"
