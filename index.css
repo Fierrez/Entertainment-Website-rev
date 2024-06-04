@@ -1,46 +1,42 @@
-:root{
-    /* --lightfont:rgb(230, 230, 230) !important;
-    --darkbg: black !important;
-    --borderdark:rgb(44, 44, 44) !important ;
-    
-    --darkfont: rgb(10, 10, 10) !important;
-    --lightbg: rgb(255, 255, 255) !important;
-    --borderlight:rgb(100, 100, 100) !important; */
-
-    --font: rgba(0, 0, 0, 0.808) !important;
-    --bg: white !important;
-    --bordercolor:rgba(44, 44, 44, 0.637) !important  ;
-}
-
-
 
 
 
 *{
-    box-sizing: border-box;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body{
     margin: 0;
     padding: 0;
+    color: var(--font) !important;
+    background-color: var(--bg) !important;
+    border-color: var(--border-color) !important;
 }
 
 /* Global NavbarTop */
 header{
-    background-color: rgb(255, 255, 255);
+  color: var(--font) !important;
+  background-color: var(--bg) !important;
+  border-color: var(--border-color) !important;
     margin: 0;
     padding: 0;
     a{
         text-decoration: none;
-        color: black;
+        color: var(--font) !important;
+ 
     }
 
 
     nav{
+      color: var(--font) !important;
+      background-color: var(--bg) !important;
+      border-color: var(--border-color) !important;
+
         .logoIcon{
             font-size: 1.5rem;
+
         }
 
 
@@ -57,11 +53,16 @@ header{
             margin: 0;
             font-weight: 600;
             font-size: 16px;
-
+            color: var(--font) !important;
+            background-color: var(--bg) !important;
+            border-color: var(--border-color) !important;
         }
         .bx-menu{
             font-size: 24px;
             margin-right: 10px;
+            color: var(--font) !important;
+            background-color: var(--bg) !important;
+            border-color: var(--border-color) !important;
         }   
         img{
             width: 25px;
@@ -74,9 +75,12 @@ header{
     .searchBar{
         border-radius: 20px;
         border:1px solid rgb(85, 85, 85);
-        background-color: #b9b9b93f;
+        color: var(--font) !important;
+        background-color: var(--bg) !important;
+        border-color: var(--border-color) !important;
         overflow: hidden;
         height: 34px;
+
         input{
             
             width: 33vw;
@@ -85,7 +89,10 @@ header{
             border: none;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
-            border-right: 1px solid black;
+            border-right: 1px solid var(--border-color) !important;
+            color: var(--font) !important;
+            background-color: var(--bg) !important;
+            border-color: var(--border-color) !important;
 
         }
         input:focus{
@@ -94,12 +101,18 @@ header{
             border-bottom-left-radius: 20px;
             border-right: 1px solid black;
             outline: none;
+            color: var(--font) !important;
+            background-color: var(--bg) !important;
+            border-color: var(--border-color) !important;
 
         }
         .search-icon{
             padding: 0px 23px 0px 20px;
             margin: 0;
             font-size:20px ;
+            color: var(--font) !important;
+            background-color: var(--bg) !important;
+            border-color: var(--border-color) !important;
             
         }
         
@@ -111,7 +124,9 @@ header{
         background: none;
         border: none;
         font-size: 1.3rem;
-        
+        color: var(--font) !important;
+        background-color: var(--bg) !important;
+        border-color: var(--border-color) !important;
         
     }
     .profile {
