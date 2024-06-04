@@ -70,7 +70,7 @@ include ("connect.php");
                     </div>
                     
                     <button type="button" class="profile d-flex"  data-bs-toggle="modal" data-bs-target="#modalSignin">
-                        <i class='bx bx-user-circle profileIcon'></i>Signin
+                        <i class='bx bx-user-circle profileIcon'></i>< Signin
                     </button>
 
 
@@ -101,9 +101,9 @@ include ("connect.php");
           <h1 class="fw-bold mb-0 fs-2">Log In to BiliTube </h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-  
+        
         <div class="modal-body p-5 pt-0">
-          <form class="" method="post" action="register.php">
+          <form id="LogInForm" class="" method="post" action="index.php">
             <div class="form-floating mb-3">
               <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="name@example.com">
               <label for="email">Email address</label>
@@ -111,11 +111,16 @@ include ("connect.php");
             <div class="form-floating mb-3">
               <input type="password" class="form-control rounded-3" id="password" name="password" placeholder="Password">
               <label for="password">Password</label>
+            
+              <small class="text-danger ms-2">
+
+              </small>
             </div>
-            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="LogInName" name="LogInName">Log in</button>
+            
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="LogInButton" name="LogInName">Log in</button>
             <small class="text-body-secondary">By clicking Log in, you agree to the terms of use.</small><br>
             <small class="text-body-secondary">Don't have an account?<button type="button" class="modal-signup-button"   data-bs-toggle="modal" data-bs-target="#modalSignup">
-                Signup
+                Signup now
                 </button>
             </small>
             <hr class="my-4">
@@ -187,11 +192,33 @@ include ("connect.php");
     </div>
   </div>
 
+
+              <?php
+                if(isset($_SESSION['email'])){
+                    $userAccountEmail = $_SESSION['email'];
+                    $query =mysqli_query($conn, "SELECT useraccount.* FROM `useraccount` where useraccount.userAccountEmail = '$userAccountEmail' ");
+                  
+                    while($row=mysqli_fetch_array($query)){
+                      
+                        
+                    }
+
+                }
+
+            ?>
+  
+
+
+
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
 
     <script src="index.js"></script>
-    <script src="global.js"></script>
+    <script type="text/javascript" src="globaljs.php"></script>
 </body>
 </html>

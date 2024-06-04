@@ -12,6 +12,5 @@ if(localStorage.getItem("firstvisit") == null){
 
 }
 
-const SignUpButton = document.getElementById("SignUpButton")
-const SignInButton = document.getElementById("LogInButton")
-
+// const SignUpButton = document.getElementById("SignUpButton")
+// const SignInButton = document.getElementById("LogInButton")

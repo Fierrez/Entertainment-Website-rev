@@ -30,7 +30,7 @@ function LightMode(){
         root.style.setProperty('--popupbordercolor','rgb(118, 171, 174)')
         root.style.setProperty('--popuplabelcolor','rgb(118, 171, 174)')
         toggle="false"
-        localStorage.setItem("prefferedTheme","white")
+        localStorage.setItem("preferredTheme","white")
 
     }
 
@@ -39,3 +39,11 @@ function LightMode(){
 
 
 LightThemeToggle.addEventListener("click", LightMode)
+
+var LoginButton = $('#LogInButton');
+var SignUpButton =$('#SignUpButton');
+
+LoginButton.click(function(){
+    console.log(LoginButton)
+
+})

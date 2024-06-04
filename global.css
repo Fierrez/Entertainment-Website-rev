@@ -1,16 +1,18 @@
  :root{
-    /* --lightfont:rgb(230, 230, 230) !important;
-    --darkbg: black !important;
-    --borderdark:rgb(44, 44, 44) !important ;
-    
-    --darkfont: rgb(10, 10, 10) !important;
-    --lightbg: rgb(255, 255, 255) !important;
-    --borderlight:rgb(100, 100, 100) !important; */
 
-    --font: ;
-    --bg: ;
-    --bordercolor: ; 
+    --font:black ;
+    --bg: rgb(255, 255, 255);
+    --bordercolor: rgb(44, 44, 44); 
+    --bordershadow:
+
+    --popupfont: black;
+    --popupbg:rgb(247, 247, 247) ;
+    --popupbordercolor: rgb(118, 171, 174);
+    --popupbordershadow: ; 
+    --popuplabelcolor: black;
+    
 } 
+
 
 
 

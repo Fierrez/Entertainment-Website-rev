@@ -2,6 +2,7 @@
     box-sizing: border-box;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 body{
@@ -147,6 +148,11 @@ header{
         padding: 10px;
 
     }
+    .dropdown-menu{
+      color: var(--popupfont);
+      background-color: var(--popupbg);
+      border: 1px solid var(--popupbordercolor);
+    }
 
 }
 
@@ -247,3 +253,25 @@ header{
   }
   
   
+
+
+  .modal-body,  .modal-header,.text-body-secondary{
+    color: var(--popupfont) !important;
+    background-color: var(--popupbg)!important;
+    border-color:var(--popupbordercolor)!important;
+    
+    label{
+      color: var(--popuplabelcolor) !important; 
+    }
+  }
+
+  .modal-signup-button,.modal-login-button{
+    color: rgb(0,147, 255);
+    border: none;
+    background-color: transparent;
+  }
+
+
+  .error-message{
+    color:red;
+  }

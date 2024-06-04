@@ -7,3 +7,9 @@ from music and vlogs to tutorials and live streams. Join a vibrant community of 
 >**[BiliTube](https://fierrez.github.io/Entertainment-Website-FP/)**
 
 Revise
+
+# Features
+    Apearance:
+        Dark Theme
+        Light Theme
+    

@@ -40,7 +40,8 @@ if(isset($_POST['LogInName'])){
         $row = $result -> fetch_assoc();
         $_SESSION['email']= $row['userAccountEmail'];
         header('location:homepage.php');
- 
+        
+        
         exit();
         
     }else{
