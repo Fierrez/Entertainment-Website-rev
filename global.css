@@ -1,9 +1,9 @@
- :root{
+:root{
 
-    --font:black ;
-    --bg: rgb(255, 255, 255);
-    --bordercolor: rgb(44, 44, 44); 
-    --bordershadow:
+    --font:  ;
+    --bg:  ;
+    --bordercolor: ; 
+    --bordershadow : ; 
 
     --popupfont: black;
     --popupbg:rgb(247, 247, 247) ;
@@ -16,18 +16,3 @@
 
 
 
-/* 
-*{
-    color: var(--font) !important;
-    background-color: var(--bg)!important;
-    border-color:var(--bordercolor)!important;
-} */
-.light-theme{
-    color: black !important;
-    background-color: white !important;
-}   
-
-.dark-theme {
-    color: white !important;
-    background-color: black !important;
-}

@@ -15,7 +15,7 @@ body{
 
 /* Global NavbarTop */
 header{
-    background-color: rgb(255, 255, 255);
+
     margin: 0;
     padding: 0;
     color: var(--font) !important;

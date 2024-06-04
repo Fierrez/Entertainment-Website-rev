@@ -8,7 +8,7 @@ include ("connect.php");
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,8 +23,8 @@ include ("connect.php");
     
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="global.css">
-</head>
-<body>
+</head >
+<body >
     <header class="container-fluid fixed-top ">
 
         <nav class="container-fluid d-flex navbar ">
@@ -105,16 +105,16 @@ include ("connect.php");
         <div class="modal-body p-5 pt-0">
           <form id="LogInForm" class="" method="post" action="index.php">
             <div class="form-floating mb-3">
-              <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="name@example.com">
+              <input type="email" class="form-control rounded-3" id="emailLogIn" name="email" placeholder="name@example.com">
               <label for="email">Email address</label>
+
+              <small class="text-danger ms-2" id="errorMessageEmailLogIn"> </small>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3" id="password" name="password" placeholder="Password">
+              <input type="password" class="form-control rounded-3" id="passwordLogIn" name="password" placeholder="Password">
               <label for="password">Password</label>
-            
-              <small class="text-danger ms-2">
 
-              </small>
+              <small class="text-danger ms-2" id="errorMessagePasswordLogIn"> </small>
             </div>
             
             <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="LogInButton" name="LogInName">Log in</button>
@@ -153,18 +153,24 @@ include ("connect.php");
         </div>
   
         <div class="modal-body p-5 pt-0">
-          <form class="" method="post" action="register.php">
+          <form class="" method="post" action="register.php" id="SignUpForm">
             <div class="form-floating mb-3">
-              <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="name@example.com">
+              <input type="text" class="form-control rounded-3" id="emailSignUp" name="emailSignUp" placeholder="name@example.com">
               <label for="email">Email address</label>
+
+              <small class="text-danger ms-2" id="errorMessageEmailSignUp"> </small>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3" id="password" name="password" placeholder="Password">
+              <input type="password" class="form-control rounded-3 passwordSignUp" id="passwordSignUp" name="password" placeholder="Password">
               <label for="password">Password</label>
+
+              <small class="text-danger ms-2" id="errorMessagePasswordSignUp"> </small>
             </div>
             <div class="form-floating mb-3">
-              <input type="text" class="form-control rounded-3" id="username" name="username" placeholder="Username">
+              <input type="text" class="form-control rounded-3" id="usernameSignUp" name="usernameSignUp" placeholder="Username">
               <label for="username">Username</label>
+
+              <small class="text-danger ms-2" id="errorMessageUsernameSignUp"> </small>
             </div>
             <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="SignUpButton" name="SignUpName">Sign up</button>
             <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small><br>
@@ -219,6 +225,7 @@ include ("connect.php");
     
 
     <script src="index.js"></script>
+    
     <script type="text/javascript" src="globaljs.php"></script>
 </body>
 </html>
