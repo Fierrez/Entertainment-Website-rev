@@ -14,12 +14,12 @@
 
 
 
-
+/* 
 *{
     color: var(--font) !important;
     background-color: var(--bg)!important;
     border-color:var(--bordercolor)!important;
-}
+} */
 .light-theme{
     color: black !important;
     background-color: white !important;

@@ -7,6 +7,9 @@
 body{
     margin: 0;
     padding: 0;
+    color: var(--font) !important;
+    background-color: var(--bg)!important;
+    border-color:var(--bordercolor)!important;
 }
 
 /* Global NavbarTop */
@@ -14,13 +17,21 @@ header{
     background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
+    color: var(--font) !important;
+    background-color: var(--bg)!important;
+    border-color:var(--bordercolor)!important;
     a{
         text-decoration: none;
-        color: black;
+ 
+        color: var(--font) !important;
+ 
     }
 
 
     nav{
+      color: var(--font) !important;
+      background-color: var(--bg)!important;
+      border-color:var(--bordercolor)!important;
         .logoIcon{
             font-size: 1.5rem;
         }
@@ -39,6 +50,8 @@ header{
             margin: 0;
             font-weight: 600;
             font-size: 16px;
+            color: var(--font) !important;
+
 
         }
         .bx-menu{
@@ -56,9 +69,13 @@ header{
     .searchBar{
         border-radius: 20px;
         border:1px solid rgb(85, 85, 85);
-        background-color: #b9b9b93f;
         overflow: hidden;
         height: 34px;
+
+
+        color: var(--font) !important;
+        background-color: var(--bg)!important;
+        border-color:var(--bordercolor)!important;
         input{
             
             width: 33vw;
@@ -69,6 +86,10 @@ header{
             border-bottom-left-radius: 20px;
             border-right: 1px solid black;
 
+            color: var(--font) !important;
+            background-color: var(--bg)!important;
+            border-color:var(--bordercolor)!important;
+
         }
         input:focus{
             border: none;
@@ -77,12 +98,19 @@ header{
             border-right: 1px solid black;
             outline: none;
 
+            color: var(--font) !important;
+            background-color: var(--bg)!important;
+            border-color:var(--bordercolor)!important;
+
         }
         .search-icon{
             padding: 0px 23px 0px 20px;
             margin: 0;
             font-size:20px ;
-            
+          
+            color: var(--font) !important;
+            background-color: var(--bg)!important;
+            border-color:var(--bordercolor)!important;
         }
         
     }
@@ -94,7 +122,9 @@ header{
         border: none;
         font-size: 1.3rem;
         
-        
+        color: var(--font) !important;
+        background-color: var(--bg)!important;
+        border-color:var(--bordercolor)!important;
     }
     .profile {
         border: 1px solid var(--bordercolor);
