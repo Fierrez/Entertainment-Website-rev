@@ -3,12 +3,13 @@ include 'connect.php';
 
 if(isset($_POST['SignUpName'])){
 
-    $userAccountEmail = $_POST['email'];
-    $userAccountPassword = $_POST['password'];
+    $userAccountEmail = $_POST['emailSignUp'];
+    $userAccountPassword = $_POST['passwordSignUp'];
     $userAccountPassword = md5($userAccountPassword);
-    $userAccountName = $_POST['username'];
+    $userAccountName = $_POST['usernameSignUp'];
 
     $checkEmail = "SELECT * FROM useraccount where userAccountEmail= '$userAccountEmail'";
+
     $result = $conn -> query($checkEmail);
     if($result -> num_rows > 0 ){
         echo 'Email Address Already Exist!';
@@ -26,28 +27,52 @@ if(isset($_POST['SignUpName'])){
     }
 }
  
+
+
+
 if(isset($_POST['LogInName'])){
-    $userAccountEmail=$_POST['email'];
-    $userAccountPassword = $_POST['password'];
+    $userAccountEmail=$_POST['emailLogIn'];
+    $userAccountPassword = $_POST['passwordLogIn'];
     $userAccountPassword = md5($userAccountPassword);
 
     $sql = "SELECT * FROM userAccount where userAccountEmail= '$userAccountEmail' and userAccountPassword='$userAccountPassword'";
     $result = $conn -> query($sql);
-   
+    
 
     if($result -> num_rows > 0){
         session_start();
         $row = $result -> fetch_assoc();
-        $_SESSION['email']= $row['userAccountEmail'];
-        header('location:homepage.php');
-        
+        $_SESSION['emailLogIn']= $row['userAccountEmail'];
+        header('location:index.php');
+        echo " Found, Correct Email or Password" ;
+
+        if(isset($_SESSION['emailLogIn'])){
+            $userAccountEmail = $_SESSION['emailLogIn'];
+            
+            $query =mysqli_query($conn, "SELECT useraccount.* FROM `useraccount` where useraccount.userAccountEmail = '$userAccountEmail' ");
+          
+            while($row=mysqli_fetch_array($query)){
+                echo $row['userAccountName'];
+                echo $row['userAccountEmail'];
+
+                $cookie_username= $row['userAccountName'];
+                $cookie_useremail= $row['userAccountEmail'];
+
+                setcookie("username",$cookie_username, time()+ 1114445, "/");
+                setcookie("useremail",$cookie_useremail, time()+ (1 * 30), "/"); 
+
+
+            }
+
+        }
         
         exit();
         
+        
     }else{
-
-        echo "Not Found, Incorrect Email or Password" ;
-
+        echo "Not Found, Incorrect Email or Password";
+        
+        
     } 
 }
 

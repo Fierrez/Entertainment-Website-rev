@@ -1,3 +1,5 @@
+console.log(  Cookies.get('username')  ) ;
+
 const LightThemeToggle = document.getElementById("light-theme-button")
 
 var toggle= localStorage.getItem("isPreferredTheme");
@@ -66,12 +68,19 @@ var isGmailAddress = /[@]+/;
 
 
 
-// $('#LogInButton').click(function(){
-//     $("#LogInForm").submit(function(e){
-//         e.preventDefault();
+    $("#UsernameProfile").html(Cookies.get('username'))
+     Cookies.remove("username");
 
-//     })
-// })
+$('#LogInButton').click(function(){
+    console.log("login click");
+    
+    // $("#LogInForm").submit(function(e){
+    //     e.preventDefault();
+
+    // })
+    
+})
+
 
 
 
@@ -105,22 +114,26 @@ var isGmailAddress = /[@]+/;
 // SignUpForm Validation and Authentication
 
 $('#SignUpButton').click(function(){
-    $("#SignUpForm").submit(function(e){
-        e.preventDefault();
+    // $("#SignUpForm").submit(function(e){
+    //     e.preventDefault();
         
-    })
+    // })
     console.log("signup click")
+    
+    
 
-
+   
 
     if( $("#usernameSignUp").val().length == 0 ){
 
         $("#errorMessageUsernameSignUp").html("Please enter a username")
         $("#usernameSignUp").css("box-shadow","0 0 1rem red")
         
+        
     }else{
         $("#errorMessageUsernameSignUp").html(" ")
         $("#usernameSignUp").css("box-shadow","")
+        
     }
 })
 
@@ -131,12 +144,16 @@ $("#emailSignUp").keyup(function(){
         
         $("#errorMessageEmailSignUp").html(" ")
         $("#emailSignUp").css("box-shadow","")
+        
     }else {
         
         $("#errorMessageEmailSignUp").html("Please enter a valid email address")
         $("#emailSignUp").css("box-shadow","0 0 1rem red")
+        
     }
 
+
+    disableSignUp();
 })
 
 
@@ -150,24 +167,48 @@ $("#passwordSignUp").keyup(function(){
         $("#errorMessagePasswordSignUp").html("Password should have minimum of 8 characters")
         $("#passwordSignUp").css("box-shadow","0 0 1rem red")
         
-    }else if( $("#passwordSignUp").val() == "" ) {
 
+
+    }else if( $("#passwordSignUp").val() == "" ) {
+        
         $("#errorMessagePasswordSignUp").html(" ")
         $("#passwordSignUp").css("box-shadow","")
     }else{
+        
         $("#errorMessagePasswordSignUp").html(" ") 
         $("#passwordSignUp").css("box-shadow","")
     }
 
+
+    disableSignUp();
 })
 
 $("#usernameSignUp").keyup(function(){
     console.log("key press");
+
     if( $("#usernameSignUp").val().length > 0 ){
 
         $("#errorMessageUsernameSignUp").html(" ")
         $("#usernameSignUp").css("box-shadow","")
+        
     }
 
 
+    disableSignUp();
 })
+
+
+function disableSignUp(){
+    if( !isGmailAddress.test($("#emailSignUp").val()) || $("#emailSignUp").val() == "" || $("#passwordSignUp").val().length < 8  || $("#passwordSignUp").val() == "" || $("#usernameSignUp").val().length == ""){
+        $('#SignUpButton').attr("disabled","")
+        // 
+
+        console.log('disabled')
+    }else{
+        
+        $('#SignUpButton').removeAttr("disabled");
+        
+
+        console.log('not disabled')
+    }
+}

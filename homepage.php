@@ -17,25 +17,12 @@ include ("connect.php");
     <div style="text-align:center;padding:15%;">
         <p style="font-size:50px;font-weight:bold;">
             Hello <?php
-                if(isset($_SESSION['email'])){
-                    $userAccountEmail = $_SESSION['email'];
-                    $query =mysqli_query($conn, "SELECT useraccount.* FROM `useraccount` where useraccount.userAccountEmail = '$userAccountEmail' ");
-                  
-                    while($row=mysqli_fetch_array($query)){
-                        echo $row['userAccountName'];
-                        
-                    }
-
-                }
+                
 
             ?>
             
         </p>
 
     </div>
-
-    <script>
-        
-    </script>
 </body>
 </html>
