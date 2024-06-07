@@ -12,4 +12,6 @@ Revise
     Apearance:
         Dark Theme
         Light Theme
-    
+    Authentication:
+        Sign Up?
+        Log In?
