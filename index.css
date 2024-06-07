@@ -149,10 +149,14 @@ header{
 
     }
     .dropdown-menu{
-      color: var(--popupfont);
-      background-color: var(--popupbg);
-      border: 1px solid var(--popupbordercolor);
+      color: var(--font);
+      background-color: var(--bg);
+      border: var(--dropdownborder);
+      box-shadow: var(--dropdownborderboxshadow);
     }
+   /* .dropdownProfileButton{
+    filter: drop-shadow(0px 0px 3px #00000069);
+    } */
 
 }
 
@@ -275,3 +279,12 @@ header{
   .error-message{
     color:red;
   }
+
+
+li a{
+  display: flex !important;
+  align-items: center;
+  .bx{padding-right: 5px;}
+  
+}
+

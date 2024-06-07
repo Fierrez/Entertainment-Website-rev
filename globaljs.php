@@ -1,16 +1,76 @@
-console.log(  Cookies.get('username')  ) ;
+
+
+console.log(  Cookies.get('userName')  ) ;
 
 const LightThemeToggle = document.getElementById("light-theme-button")
 
+
+
+if( $("#UsernameProfile").html() == "Sign In" ){
+    $("#dropdownProfileButton").html(Cookies.get('userName'))
+
+
+    $("#LogInModalButton").addClass("d-none");
+    $("#LogInModalButton").removeClass("d-flex");
+    $("#ProfileDropdownDiv").addClass("d-flex")
+    $("#ProfileDropdownDiv").removeClass("d-none");
+}
+
+
+
+//Signing in if user cookie exist
+if( Cookies.get('userName') == undefined  ){
+    
+ 
+    $("#ProfileDropdownDiv").addClass("d-none");
+    $("#ProfileDropdownDiv").removeClass("d-flex");
+    $("#LogInModalButton").addClass("d-flex")
+    $("#LogInModalButton").removeClass("d-none");
+
+    $('#LogInModalButton').trigger('click');
+
+
+
+}else{
+
+    $("#UsernameProfile").html(Cookies.get('userName'))
+    $("#LogInModalButton").addClass("d-none");
+    $("#LogInModalButton").removeClass("d-flex");
+    $("#ProfileDropdownDiv").addClass("d-flex")
+    $("#ProfileDropdownDiv").removeClass("d-none");
+    
+}
+
+// Logout
+$("#ProfileLogoutButton").click(function Logout(){
+
+    Cookies.remove("userName");
+    $("#LogInModalButton").addClass("d-flex")
+    $("#LogInModalButton").removeClass("d-none");
+    
+
+    console.log("logout")
+
+})
+
+
+
+
+
+
+
+
+
+//Appearance Mode
 var toggle= localStorage.getItem("isPreferredTheme");
+
 LightMode()
-
-
-
-
-
-console.log(toggle)
+console.log(toggle) 
 console.log(localStorage.getItem("isPreferredTheme"));
+
+
+
+
 
 function LightMode(){    
     let root = document.documentElement
@@ -29,6 +89,8 @@ function LightMode(){
         root.style.setProperty('--popupbordercolor','rgb(118, 171, 174)')
         // root.style.setProperty('popupbordershadow','')
         root.style.setProperty('--popuplabelcolor','rgb(118, 171, 174)')
+
+  
 
         toggle="white";
         localStorage.setItem("isPreferredTheme","black")
@@ -68,8 +130,8 @@ var isGmailAddress = /[@]+/;
 
 
 
-    $("#UsernameProfile").html(Cookies.get('username'))
-     Cookies.remove("username");
+
+
 
 $('#LogInButton').click(function(){
     console.log("login click");

@@ -1,9 +1,10 @@
-<?php
-session_start();
-include ("connect.php");
+<!-- php script -->
+  <?php
+  session_start();
+  include ("connect.php");
 
 
-?>
+  ?>
 
 
 
@@ -69,9 +70,25 @@ include ("connect.php");
 
                     </div>
                     
-                    <button type="button" class="profile d-flex"  data-bs-toggle="modal"  data-bs-target="#modalSignin">
+                    <!-- //Sign in -->
+                    <button type="button" class="profile d-flex"  data-bs-toggle="modal"  data-bs-target="#modalSignin" id="LogInModalButton">
                         <i class='bx bx-user-circle profileIcon'></i><span id="UsernameProfile">Sign In</span>
                     </button>
+                    
+                    <!-- //Profile -->
+                    <div class="dropstart dropdown d-flex " id="ProfileDropdownDiv">
+
+                        <button class= "btn btn-secondary dropdownProfileButton" type="button" id="dropdownProfileButton" data-bs-toggle="dropdown" aria-expanded="false">
+                             Profile
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownProfileButton">
+                          <li><a class="dropdown-item" href="uploadvideo.html"><i  title="Upload Video" class='bx bx-upload' onclick="uploadFile()" ></i> Upload Video</a></li>
+                          <li><a class="dropdown-item" href="watchHistory.html"><i title="History" class='bx bx-history' ></i>  Watch History</a></li>
+                          <li><a class="dropdown-item" id="ProfileLogoutButton" href="index.php"><i class='bx bx-log-out'></i>  Log out</a></li>
+                        </ul>
+
+                    </div>
 
 
                 </div>
@@ -94,56 +111,57 @@ include ("connect.php");
 
 
 <!-- Sign In Modal -->  
-<div class="modal fade" tabindex="-1" role="dialog" id="modalSignin">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content rounded-4 shadow">
-        <div class="modal-header p-5 pb-4 border-bottom-0">
-          <h1 class="fw-bold mb-0 fs-2">Log In to BiliTube </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        
-        <div class="modal-body p-5 pt-0">
-          <form id="LogInForm" class="" method="post" action="register.php">
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control rounded-3" id="emailLogIn" name="emailLogIn" placeholder="name@example.com">
-              <label for="email">Email address</label>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalSignin">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Log In to BiliTube </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <div class="modal-body p-5 pt-0">
+            <form id="LogInForm" class="" method="post" action="register.php">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-3" id="emailLogIn" name="emailLogIn" placeholder="name@example.com">
+                <label for="email">Email address</label>
 
-              <small class="text-danger ms-2" id="errorMessageEmailLogIn"> </small>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3" id="passwordLogIn" name="passwordLogIn" placeholder="Password">
-              <label for="password">Password</label>
+                <small class="text-danger ms-2" id="errorMessageEmailLogIn"> </small>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-3" id="passwordLogIn" name="passwordLogIn" placeholder="Password">
+                <label for="password">Password</label>
 
-              <small class="text-danger ms-2" id="errorMessagePasswordLogIn"> </small>
-            </div>
-            
-            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="LogInButton" name="LogInName">Log in</button>
-            <small class="text-body-secondary">By clicking Log in, you agree to the terms of use.</small><br>
-            <small class="text-body-secondary">Don't have an account?<button type="button" class="modal-signup-button"   data-bs-toggle="modal" data-bs-target="#modalSignup">
-                Signup now
-                </button>
-            </small>
-            <hr class="my-4">
-            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-              <svg class="bi me-1" width="16" height="16"><use xlink:href="#google"/></svg>
-              Sign up with Google
-            </button>
-            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-              <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
-              Sign up with Facebook
-            </button>
-            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-              <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
-              Sign up with GitHub
-            </button>
-          </form>
+                <small class="text-danger ms-2" id="errorMessagePasswordLogIn"> </small>
+              </div>
+              
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="LogInButton" name="LogInName">Log in</button>
+              <small class="text-body-secondary">By clicking Log in, you agree to the terms of use.</small><br>
+              <small class="text-body-secondary">Don't have an account?<button type="button" class="modal-signup-button"   data-bs-toggle="modal" data-bs-target="#modalSignup">
+                  Signup now
+                  </button>
+              </small>
+              <hr class="my-4">
+              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#google"/></svg>
+                Sign up with Google
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
+                Sign up with Facebook
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+                Sign up with GitHub
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-    <!-- Sign up Modal -->
+
+<!-- Sign up Modal -->
     <div class="modal fade" tabindex="-1" role="dialog" id="modalSignup">
         <div class="modal-dialog" role="document">
           <div class="modal-content rounded-4 shadow">
@@ -153,9 +171,9 @@ include ("connect.php");
             </div>
       
             <div class="modal-body p-5 pt-0">
-              <form class="" method="post" action="register.php" id="SignUpForm">
+              <form class="" method="post" action="register.php" id="SignUpForm" novalidate>
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control rounded-3" id="emailSignUp" name="emailSignUp" placeholder="name@example.com">
+                  <input type="email" class="form-control rounded-3" id="emailSignUp" name="emailSignUp" placeholder="name@example.com">
                   <label for="email">Email address</label>
 
                   <small class="text-danger ms-2" id="errorMessageEmailSignUp"> </small>
@@ -205,10 +223,13 @@ include ("connect.php");
 
 
 
+    
+
+<!-- script     -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
-
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 

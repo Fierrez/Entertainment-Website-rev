@@ -1,5 +1,18 @@
 {
+  "type": "module",
   "dependencies": {
+    "execa": "^9.2.0",
     "js-cookie": "^3.0.5"
-  }
+  },
+  "name": "entertainment-website-rev",
+  "version": "1.0.0",
+  "description": "BiliTube is a entertainment platform where users can upload, watch, and share a wide variety of videos, \r from music and vlogs to tutorials and live streams. Join a vibrant community of creators and viewers, and discover endless entertainment, inspiration, and information all in one place.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node live.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

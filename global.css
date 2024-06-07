@@ -3,7 +3,7 @@
     --font:  ;
     --bg:  ;
     --bordercolor: ; 
-    --bordershadow : ; 
+    --bordershadow : drop-shadow(-4px 5px 10px #a09eff); ; 
 
     --popupfont: black;
     --popupbg:rgb(247, 247, 247) ;
@@ -11,8 +11,12 @@
     --popupbordershadow: ; 
     --popuplabelcolor: black;
     
-} 
 
+    --dropdownfont: var(--font)  ;
+    --dropdownbg: var(--bg) ;
+    --dropdownborderboxshadow:  0px 0px 20px 1px rgb(216 214 255 / 30%); 
+    --dropdownborder: 1px solid rgb(44 44 44 10%);
+} 
 
 
 

@@ -19,14 +19,19 @@ if(isset($_POST['SignUpName'])){
         "INSERT INTO useraccount ( userAccountEmail, userAccountPassword,userAccountName) 
         VALUES ('$userAccountEmail','$userAccountPassword','$userAccountName')";
 
+        setcookie("userName",$userAccountName, time()+ 1114445, "/");
+
+
         if($conn -> query($insertQuery) == TRUE){
             header("location:index.php");
+                
+            
         }else{
             echo "Error: " .$conn -> error; 
         }
     }
 }
- 
+
 
 
 
@@ -58,9 +63,10 @@ if(isset($_POST['LogInName'])){
                 $cookie_username= $row['userAccountName'];
                 $cookie_useremail= $row['userAccountEmail'];
 
-                setcookie("username",$cookie_username, time()+ 1114445, "/");
-                setcookie("useremail",$cookie_useremail, time()+ (1 * 30), "/"); 
+                setcookie("userName",$cookie_username, time()+ 1114445, "/");
 
+                // $_SESSION['username']= $cookie_username;
+                // $_SESSION['usermail'] = $cookie_useremail;
 
             }
 
@@ -73,7 +79,8 @@ if(isset($_POST['LogInName'])){
         echo "Not Found, Incorrect Email or Password";
         
         
-    } 
+    }   
 }
 
 ?>
+
